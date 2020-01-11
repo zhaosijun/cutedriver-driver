@@ -9,3 +9,11 @@ jobs:
   include:
     - stage: "Build"
       script: rake gem
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: 1Dn_oTu7ZLzTGr2v14Yjiw  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master
+    
